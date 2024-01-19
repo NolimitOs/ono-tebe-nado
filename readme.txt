@@ -4,3 +4,6 @@
 
 ссылка на макет:
 https://www.figma.com/file/8KwhMpv8qnDocX4NVFQBpn/Оно-тебе-надо?node-id=1%3A94&mode=dev
+
+ссылка на скринщоты:
+https://disk.yandex.ru/d/I66pcCuqMFLesw
