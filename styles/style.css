@@ -1,28 +1,28 @@
-/* место для вашего кода */
-.header {  
-  
-  max-width: 100%;
-  max-height: 100%;
+.header {
   display: grid;
   grid-template-columns: 3fr 1fr 1.25fr 1.75fr/*454px 148px 450px*/;
   grid-template-rows: 105px;
-  margin: 92px 24px 96px;
-  align-items: center;    
-  
+  align-items: center;  
+  max-width: 100%;  
+  margin: 92px 24px 96px;      
 }
 
 .header__links-list {
-  margin-top: 4px;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   justify-content: space-evenly;
-  list-style: circle;  
-  
+  margin-top: 4px;
+  list-style: circle;    
 }
 
 .header__links-list-item {
-height: 100% /*21px*/;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;     
 }
 
 .header__links-list-item_no-bullit {
@@ -30,15 +30,10 @@ height: 100% /*21px*/;
 }
 
 .header__link {
-color: #000;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.18px;
-text-decoration: none;
-border-bottom: 1px solid;
-
+  border-bottom: 1px solid;  
+  text-decoration: none;
+  /*letter-spacing: 0.18px;*//*в макете в ссылках "посмотреть лоты" и "об аукционе"
+  указан letter-spacing 0.18, и с ним у меня действительно было больше сходства с макетом*/
 }
 
 .header__links-list-item .header__link_active {
@@ -46,12 +41,10 @@ border-bottom: 1px solid;
 }
 
 .header__logo {
-  display: flex;
-  
+  display: flex;  
+  justify-self: center;  
   width: 100%;
-  height: 100%;  
-  justify-self: center;
-
+  height: 100%;
 }
 
 .header__logo-image {
@@ -59,209 +52,193 @@ border-bottom: 1px solid;
   height: 100% /*105px*/;
 }
 
-.header__address {
-  
+.contacts {  
   display: flex;
-  flex-grow: 0;
   flex-direction: column;
-  align-items: start;
+  flex-grow: 0;
   justify-self: start;
-
+  align-items: start;
 }
 
-.phone {
+.contacts-link {
   color: #000;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 135%/*24.3px*/;/* 135% */
-  letter-spacing: 0.18px;
-  /*border-bottom: 1px solid;
-  text-decoration: none;*/
-  text-underline-offset: 4px;
-  
-}
-
-.email {
-  color: #000;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 135%/*24.3px*/;
-letter-spacing: 0.18px;
-/*border-bottom: 1px solid;
-text-decoration: none;*/
-text-underline-offset: 4px;
+  line-height: 135%/*24.3px*/;
+  text-underline-offset: 4px;/* 135% */
+  /*letter-spacing: 0.18px;*//*в макете в ссылках "телефон" и "эл почта"
+  указан letter-spacing 0.18. Скринщоты прилагаю
+  я сам очень намучался с этими letter-spacing. Они в макете буквально через слово и разные.
+  Около 25% всего времени верстки я потратил на эти letter-spacing  */  
 }
 
 .address {
   color: #000;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 135%/*24.3px*/;
-  
+  line-height: 135%/*24.3px*/;  
 }
 
 .main {
-  padding-top: 0px;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
+  padding-top: 0px;  
 }
 
-.cover {
+.cover { 
+  position: relative;
   display:flex;
   flex-direction: column;
   width: 1100px;
-  height: 757px;
-  background-image: url(/images/cover.jpg);
-  background-size: cover;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
   background-position: center;
-  background-repeat: no-repeat; 
-  position: relative; 
-  
+  background-size: cover;  
 }
 
 .overlay {
-  display: flex;
+  position: absolute;
   inset: 0;
-  background-size: cover;
+  z-index: 0;
+  display: flex;
+  background-color: rgb(0 0 0 / 0.6);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(0 0 0 / 0.6);
-  position: absolute;
-  z-index: 0;
+  background-size: cover;
 }
 
 .cover__title {
-  max-width: 1100px;
-  width: 100%;
-  padding: 145px 50px 0 50px;
-  color: #FFF;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  padding: 145px 50px 0 50px;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 100px;
+  font-style: normal;
+  text-transform: uppercase;
 }
 
-.accent-span {
+.cover__title-span {
   display: block;
   padding-top: 20px;  
 }
 
-.text-left {
-line-height: 115%; /* 115px */
-letter-spacing: 30px;
-text-align: left;
+.cover__title-span-ono {
+  line-height: 115%; /* 115px */
+  letter-spacing: 30px;
+  text-align: left;
 }
 
-.text-left_no {
-line-height: 115%;
-letter-spacing: 60px;
+.cover__title-span-no {
+  line-height: 115%;
+  letter-spacing: 60px;
 }
 
-.text-center {
+.cover__title-span-te {
   line-height: 100%; /* 100px */
   letter-spacing: 30px;
   text-align: center;
 }
 
-.text-center_be {
+.cover__title-span-be {
   line-height: 100%;
   letter-spacing: 60px;  
 }
 
-.text-right {
+.cover__title-span-n {
   line-height: 100%; /* 100px */
   letter-spacing: 60px;
   text-align: right;
 }
 
-.text-right_ad {
+.cover__title-span-ad {
   line-height: 100%;
   letter-spacing: 30px;
 }
 
-.text-right_o {
+.cover__title-span-o {
   line-height: 100%;
   letter-spacing: 0;  
 }
 
-.cover__description {
-  display: flex;   
-  padding: 135px 50px 51px 78px;  
-  justify-content: space-between;    
+.cover__description {    
   z-index: 1;
+  display: flex;  
+  justify-content: space-between;   
+  padding: 135px 50px 51px 78px;
 }
 
 .cover__description-text {
-  display: inline-block;
   padding: 12px 0px 11px 0px;
   color: #FFF;
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
   line-height: 28px; /* 127.273% */
   text-transform: uppercase;
   word-spacing: 18px; 
 }
 
-.cover__description-text_v {
+/*.cover__description-text_v {
   display: inline-block;
   color: #FFF;
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.2px;
   text-transform: uppercase;
-}
+  В макете у буквы "В" указан letter-spacing 24.2px,
+  и с ним действительно надпись сходится с макетом 1в1.
+  Я везде проверял letter-spacing из макета на визульную надобность и соответствие.
+  Без них работа была бы сделана сильно скорее.
+  }*/
 
-.bet-button {
-  display: inline-block;
-  padding: 12px 32px 11px 31px;
+.bet-button {  
   border: 1px solid #FFF;
+  padding: 12px 32px 11px 31px;
   color: #FFF;
-  text-align: center;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
   font-size: 22px;
   font-style: normal;
-  font-weight: 500;
   line-height: normal;
-  text-transform: uppercase; 
-  
+  text-align: center;
+  text-transform: uppercase;  
 }
 
 .lots {
-  width: 100vw;
-  max-width: 1100px;
-  display: flex;
-  flex-grow: 1;  
-  flex-direction: column;
   position: relative;
+  display: flex;  
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100vw;/*без этого параметра у меня не работает перенос карточек при сжатии страницы*/
+  max-width: 1100px;
   margin-top: 179px;
 }
 
 .lots__heading {
-color: #000;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: uppercase;
-padding-left: 64px;
+  padding-left: 64px;
+  color: #000;
+  font-weight: 700;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .lots__card-list {
   display: flex; 
-  flex-grow: 1; 
-  flex-wrap: wrap;  
+  flex-wrap: wrap; 
+  flex-grow: 1;
+  gap: 25px;
+  padding: 27px 24px 0 24px;  
   /*position: relative;*/
   list-style: none;
-  padding: 27px 24px 0 24px;
-  gap: 25px;
 }
 
 .lots__card-list-item { 
@@ -277,101 +254,91 @@ padding-left: 64px;
 }
 
 .card {
-  display: flex;
-  width: 100%;
   position: relative;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-size: cover; 
 }
 
-
 .card__title {
+  z-index: 1;
   display: block;
+  padding: 51px 40px 0 40px;
   color: #FFF;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   font-size: 22px;
   font-style: normal;
-  font-weight: 700;
   line-height: 120%; /* 26.4px */
-  text-decoration-line: underline;
-  text-transform: uppercase;
   text-align: left;
-  z-index: 1;
-  padding: 51px 40px 0 40px;
-  
+  text-decoration-line: underline;
+  text-transform: uppercase;  
 }
 
 .card__text {
+  z-index: 1;
   display: block;
+  padding: 0 40px 48px 40px;
   color: #FFF;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: 120%; /* 24px */
   text-align: left;
-  z-index: 1;
-  padding: 0 40px 48px 40px;
 }
 
 .card_type_film {
-  background-image: url(/images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;  
-  }
+  background-image: url(../images/card-lot-01.jpg);
+}
 
 .card_type_book {
-  background-image: url(/images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;  
-  }
+  background-image: url(../images/card-lot-02.jpg);
+}
 
 .card_type_picture {
-  background-image: url(/images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;  
-  }
+  background-image: url(../images/card-lot-03.jpg);
+}
 
 .lots__look-more-link {
+  padding: 30px 0 0 64px;
   color: #000;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  padding: 30px 0 0 64px;
 }
 
 .about {
-  margin-top: 146px;
-  padding: 35px 24px 0;
-  box-sizing: border-box;
   display: grid;
   grid-template-columns: 334px 1fr;
-  grid-template-rows: 100%;
-  gap: 25px;
-  
+  grid-template-rows: 100%;  
   justify-items: center;
+  gap: 25px;
+  box-sizing: border-box;
+  margin-top: 146px;
+  padding: 35px 24px 0;  
 }
 
 .about__column {
   display: flex;
   flex-direction: column;
-  min-height: 560px;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .about__logo {
   display: flex;
-  background-color: black;
+  justify-content: center;
+  align-items: center;
   width: 240px;
   height: 240px;
   border-radius: 120px;
-  justify-content: center;
-  align-items: center;
+  background-color: black;
 }
 
 .about__logo-image {
@@ -381,42 +348,41 @@ padding-left: 64px;
 
 .about__title {  
   display: flex;
+  margin-top: 101px;
   color: #000;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
-  text-transform: uppercase;
-  margin-top: 101px;
-    
+  text-transform: uppercase;    
 }
 
 .about__text {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  color: #000;
-  font-family: Raleway;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
   gap: 24px;
-  
-}
-
-.about__text_first {
   color: #000;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  margin-right: 5px;
-  letter-spacing: 0.2px;
+  line-height: 24px;  
 }
 
-.about__text_paf {
+.about__text-p {
+  margin-right: 5px;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 24px;
+  /*letter-spacing: 0.2px;*/
+}
+
+/*.about__text_paf {
   letter-spacing: 0;  
 }
 
@@ -425,16 +391,11 @@ padding-left: 64px;
 }
 
 .about__text_bili {
-  letter-spacing: -0.1px;
-  
+  letter-spacing: -0.1px;  
 }
 
 .about__text_dnevnik {
   letter-spacing: 0.1px;
-}
-
-.about__text_second {
-  letter-spacing: 0;
 }
 
 .about__text_oni {
@@ -442,21 +403,24 @@ padding-left: 64px;
 }
 
 .about__text_neud {
-  letter-spacing: 0.2px
+  letter-spacing: 0.2px;
 }
 
 .about__text_pred {
   letter-spacing: 0.1px;
 }
+  Как и во всех предыдущих случаях с letter-spacing,
+  брал из макета. Скрины и ссылку на макет прилагаю.
+  Визуально, без использования letter-spacing из макета
+  расхождения с оригиналом становятся сильно заметны
+*/
 
 .footer {
   display: grid;
   grid-template-columns: 240px 1fr 240px;
   grid-template-rows: 98px;
-  margin: 180px 50px 88px;
   align-items: start;
-  ;
-  
+  margin: 180px 50px 88px;  
 }
 
 .footer__menu {
@@ -464,20 +428,18 @@ padding-left: 64px;
 }
 
 .footer__menu-list {
-  list-style: none;
-  text-align: center;
   color: #000;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  
-  
+  text-align: center;
+  list-style: none;  
 }
 
 .footer__menu-link {
-  text-decoration: none;
   border-bottom: 1px solid;
+  text-decoration: none;
 }
 
 .footer__menu-list-item .footer__menu-link_active {
@@ -486,7 +448,7 @@ padding-left: 64px;
 
 .footer__social-list {
   display: flex;
-  list-style: none;
   justify-content: space-between;
   gap: 48px;
+  list-style: none;
 }
