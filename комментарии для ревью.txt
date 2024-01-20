@@ -1,0 +1,50 @@
+приложил скриншоты по letter-spacing из макета.
+Долго мучался с ними, но они давали визуальный эффект и,
+действительно совпадение с макетом было сильно лучше, чем без них.
+
+ссылка на макет:
+https://www.figma.com/file/8KwhMpv8qnDocX4NVFQBpn/Оно-тебе-надо?node-id=1%3A94&mode=dev
+
+ссылка на скринщоты:
+https://disk.yandex.ru/d/I66pcCuqMFLesw
+________________________________________________
+
+Замучался с названиями классов...
+В проекте предлагают класс 'aligned-text_center", 
+но генератор html, к-й ранее скинули, ругается на такой класс.
+Если убрать "_", заменив "-", то не ругается.
+Заметил, что не ругается, если только одно "_" и в самом начале названия,а адальше только "-".
+
+Я так и не понял, как правильно оформлять название, указывать ли принадлежность к секции
+или какому-то элементу.
+
+<!--<h1 class="cover__title">      
+          <span class="cover__title_aligned-text_left">о<span class="letter-spacing-extended">но</span></span>   
+          <span class="cover__title_aligned-text_center">те<span class="letter-spacing-extended">бе</span></span>         
+          <span class="cover__title_aligned-text_right">н<span class="letter-spacing">ад</span><span class="no-letter-spacing">о</span></span>
+ </h1>-->
+
+или надо так:
+"<!--<h1 class="cover__title">      
+          <span class="aligned-text_left">о<span class="letter-spacing-extended">но</span></span>   
+          <span class="aligned-text_center">те<span class="letter-spacing-extended">бе</span></span>         
+          <span class="aligned-text_right">н<span class="letter-spacing">ад</span><span class="no-letter-spacing">о</span></span>
+ </h1>-->"?
+
+К сожалению, наставники не смогли дать ответ.
+_________________________________________________
+
+По выравниванию блока адреса:
+В задании было указано:
+
+"address — контейнер с адресом;
+header__address — потребуется, чтобы выравнивать блок с адресом. 
+В футере используется другое выравнивание."
+
+По макету, блок с адресом находится справа в центре со смещением в лево.
+не нашел способа так ровнять без применения margin или padding.
+Наставник, к сожалению, не может дать ответ.
+
+Текущее решение: обернул блок контактов в контейнер и ровнял этот контейнер
+с добавлением padding-right. Позволяет использовать блок контактов в футере
+без доп. выравнивания.

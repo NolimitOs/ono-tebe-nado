@@ -31,22 +31,24 @@
           alt="логотип проекта черного цвета"
           >
       </a>
-      <div></div> <!--этот пустой контейнер занимает ячейку в grid,
+      <!--<div></div> этот пустой контейнер занимает ячейку в grid,
         что помогло мне выровнять контакты в header-->               
-      <address class="contacts">
-        <a class="contacts-link" href="tel:+99995555555">+9 999 555 5555</a>
-        <a class="contacts-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        <p class="address">наб. Принсенграхт 263-<br> 265, Амстердам</p>         
-      </address>       
+      <div class="header__address">
+        <address class="contacts">
+          <a class="contacts-link" href="tel:+99995555555">+9 999 555 5555</a>
+          <a class="contacts-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+          <p class="address">наб. Принсенграхт 263-<br> 265, Амстердам</p>         
+        </address>
+      </div>      
     </header>
     <main class="main">
       <section class="cover">
         <div class="overlay"></div>
         <!-- overlay - Подкладка между текстом и фоном для затемнения-->
         <h1 class="cover__title">      
-          <span class="cover__title-span cover__title-span-ono">о<span class="cover__title-span-no">но</span></span>   
-          <span class="cover__title-span cover__title-span-te">те<span class="cover__title-span-be">бе</span></span>         
-          <span class="cover__title-span cover__title-span-n">н<span class="cover__title-span-ad">ад</span><span class="cover__title-span-o">о</span></span>
+          <span class="cover__title_aligned-text_left">о<span class="letter-spacing-extended">но</span></span>   
+          <span class="cover__title_aligned-text_center">те<span class="letter-spacing-extended">бе</span></span>         
+          <span class="cover__title_aligned-text_right">н<span class="letter-spacing">ад</span><span class="no-letter-spacing">о</span></span>
         </h1>
         <div class="cover__description">
           <p class="cover__description-text">Аукцион вещей, в которые никто не верил</p>
